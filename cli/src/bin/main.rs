@@ -18,7 +18,7 @@ use hexutil::read_hex;
 use sputnikvm::{HeaderParams, Context, SeqTransactionVM, ValidTransaction, VM,
                 AccountCommitment, RequireError, TransactionAction, VMStatus,
                 SeqContextVM};
-use sputnikvm_network_classic::{MainnetFrontierPatch, MainnetHomesteadPatch, MainnetEIP150Patch, MainnetEIP160Patch};
+use sputnikvm_network_classic::{MainnetFrontierPatch, MainnetHomesteadPatch, MainnetEIP150Patch, MainnetEIP160Patch, MainnetByzantiumPatch, MainnetConstantinoplePatch};
 use gethrpc::{GethRPCClient, NormalGethRPCClient, RPCBlock};
 use std::str::FromStr;
 use std::ops::DerefMut;
@@ -207,10 +207,12 @@ fn main() {
         };
 
         match matches.value_of("PATCH") {
-            Some("frontier") => Box::new(SeqContextVM::<MainnetFrontierPatch>::new(context, block)),
-            Some("homestead") => Box::new(SeqContextVM::<MainnetHomesteadPatch>::new(context, block)),
-            Some("eip150") => Box::new(SeqContextVM::<MainnetEIP150Patch>::new(context, block)),
-            Some("eip160") => Box::new(SeqContextVM::<MainnetEIP160Patch>::new(context, block)),
+            Some("frontier") => Box::new(SeqContextVM::new(MainnetFrontierPatch::default(), context, block)),
+            Some("homestead") => Box::new(SeqContextVM::new(MainnetHomesteadPatch::default(), context, block)),
+            Some("eip150") => Box::new(SeqContextVM::new(MainnetEIP150Patch::default(), context, block)),
+            Some("eip160") => Box::new(SeqContextVM::new(MainnetEIP160Patch::default(), context, block)),
+            Some("byzantium") => Box::new(SeqContextVM::new(MainnetByzantiumPatch::default(), context, block)),
+            Some("constantinople") => Box::new(SeqContextVM::new(MainnetConstantinoplePatch::default(), context, block)),
             _ => panic!("Unsupported patch."),
         }
     } else {
@@ -233,10 +235,11 @@ fn main() {
         };
 
         match matches.value_of("PATCH") {
-            Some("frontier") => Box::new(SeqTransactionVM::<MainnetFrontierPatch>::new(transaction, block)),
-            Some("homestead") => Box::new(SeqTransactionVM::<MainnetHomesteadPatch>::new(transaction, block)),
-            Some("eip150") => Box::new(SeqTransactionVM::<MainnetEIP150Patch>::new(transaction, block)),
-            Some("eip160") => Box::new(SeqTransactionVM::<MainnetEIP160Patch>::new(transaction, block)),
+            Some("frontier") => Box::new(SeqTransactionVM::new(MainnetFrontierPatch::default(), transaction, block)),
+            Some("homestead") => Box::new(SeqTransactionVM::new(MainnetHomesteadPatch::default(), transaction, block)),
+            Some("eip150") => Box::new(SeqTransactionVM::new(MainnetEIP150Patch::default(), transaction, block)),
+            Some("eip160") => Box::new(SeqTransactionVM::new(MainnetEIP160Patch::default(), transaction, block)),
+            Some("byzantium") => Box::new(SeqTransactionVM::new(MainnetByzantiumPatch::default(), transaction, block)),
             _ => panic!("Unsupported patch."),
         }
     };
