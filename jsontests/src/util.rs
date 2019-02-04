@@ -2,7 +2,7 @@ use serde_json::Value;
 use serde_json as json;
 use test_transaction;
 use bench_transaction;
-use sputnikvm::Patch;
+use evm::Patch;
 
 pub fn run_test<P: Patch + Clone + Default>(name: &str, test: &str) {
     let test: Value = json::from_str(test).unwrap();

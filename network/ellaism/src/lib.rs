@@ -3,7 +3,7 @@ extern crate sputnikvm;
 
 use std::marker::PhantomData;
 use bigint::{Gas, U256, H160, Address};
-use sputnikvm::{Precompiled, AccountPatch, Patch,
+use evm::{Precompiled, AccountPatch, Patch,
                 ID_PRECOMPILED, ECREC_PRECOMPILED, SHA256_PRECOMPILED, RIP160_PRECOMPILED};
 
 pub static ELLA_PRECOMPILEDS: [(Address, Option<&'static [u8]>, &'static Precompiled); 4] = [

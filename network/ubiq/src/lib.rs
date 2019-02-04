@@ -1,8 +1,8 @@
 extern crate bigint;
-extern crate sputnikvm;
+extern crate evm;
 
 use bigint::{Gas, U256, H160, Address};
-use sputnikvm::{Precompiled, AccountPatch, Patch,
+use evm::{Precompiled, AccountPatch, Patch,
                 ID_PRECOMPILED, ECREC_PRECOMPILED, SHA256_PRECOMPILED, RIP160_PRECOMPILED};
 
 pub static FRONTIER_PRECOMPILEDS: [(Address, Option<&'static [u8]>, &'static Precompiled); 4] = [

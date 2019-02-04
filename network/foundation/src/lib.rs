@@ -1,13 +1,13 @@
 extern crate bigint;
-extern crate sputnikvm;
-extern crate sputnikvm_precompiled_modexp;
-extern crate sputnikvm_precompiled_bn128;
+extern crate evm;
+extern crate evm_precompiled_modexp;
+extern crate evm_precompiled_bn128;
 
 use bigint::{Gas, U256, H160, Address};
-use sputnikvm::{Precompiled, AccountPatch, Patch,
+use evm::{Precompiled, AccountPatch, Patch,
                 ID_PRECOMPILED, ECREC_PRECOMPILED, SHA256_PRECOMPILED, RIP160_PRECOMPILED};
-use sputnikvm_precompiled_modexp::MODEXP_PRECOMPILED;
-use sputnikvm_precompiled_bn128::{BN128_ADD_PRECOMPILED, BN128_MUL_PRECOMPILED, BN128_PAIRING_PRECOMPILED};
+use evm_precompiled_modexp::MODEXP_PRECOMPILED;
+use evm_precompiled_bn128::{BN128_ADD_PRECOMPILED, BN128_MUL_PRECOMPILED, BN128_PAIRING_PRECOMPILED};
 
 pub static FRONTIER_PRECOMPILEDS: [(Address, Option<&'static [u8]>, &'static Precompiled); 4] = [
     (H160([0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0x01]),

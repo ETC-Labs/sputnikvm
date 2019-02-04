@@ -18,8 +18,8 @@ name = "regtests"
 path = "src/bin/main.rs"
 
 [dependencies]
-sputnikvm = { path = '..' }
-sputnikvm-network-classic = { path = "../network/classic" }
+evm = { path = '..' }
+evm-network-classic = { path = "../network/classic" }
 gethrpc = { path = '../gethrpc' }
 etcommon-block = "0.5"
 etcommon-bigint = "0.2"

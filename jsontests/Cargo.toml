@@ -9,7 +9,7 @@ name = "performance"
 harness = false
 
 [dependencies]
-sputnikvm = { path = '..' }
+evm = { path = '..' }
 jsontests-derive = { path = "./jsontests-derive" }
 etcommon-bigint = "0.2"
 etcommon-hexutil = "0.2"

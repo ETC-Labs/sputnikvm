@@ -2,8 +2,8 @@
 
 extern crate jsontests;
 extern crate serde_json;
-extern crate sputnikvm;
-use sputnikvm::VMTestPatch;
+extern crate evm;
+use evm::VMTestPatch;
 
 use serde_json::Value;
 use jsontests::test_transaction;

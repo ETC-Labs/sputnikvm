@@ -5,13 +5,13 @@
 #[macro_use]
 extern crate jsontests_derive;
 extern crate jsontests;
-extern crate sputnikvm;
+extern crate evm;
 extern crate bigint;
 
 #[cfg(feature = "bench")]
 extern crate test;
 
-use sputnikvm::{EmbeddedAccountPatch, Patch, EMBEDDED_PRECOMPILEDS, Precompiled};
+use evm::{EmbeddedAccountPatch, Patch, EMBEDDED_PRECOMPILEDS, Precompiled};
 use bigint::{Address, Gas};
 
 // Shifting opcodes tests

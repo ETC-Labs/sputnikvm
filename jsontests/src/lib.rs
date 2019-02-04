@@ -1,4 +1,4 @@
-extern crate sputnikvm;
+extern crate evm;
 extern crate serde_json;
 extern crate hexutil;
 extern crate bigint;
@@ -18,8 +18,8 @@ use std::ops::Deref;
 use std::sync::{Arc, Mutex};
 use bigint::{Gas, M256, U256, H256, Address};
 use hexutil::*;
-use sputnikvm::errors::RequireError;
-use sputnikvm::{VM, SeqContextVM, Context, VMStatus, Patch};
+use evm::errors::RequireError;
+use evm::{VM, SeqContextVM, Context, VMStatus, Patch};
 
 pub fn fire_with_block<P: Patch + Clone>(machine: &mut SeqContextVM<P>, block: &JSONBlock) {
     loop {

@@ -1,12 +1,12 @@
 extern crate bigint;
 extern crate bn;
-extern crate sputnikvm;
+extern crate evm;
 
 use std::rc::Rc;
 use bigint::{Gas, U256};
 
-use sputnikvm::Precompiled;
-use sputnikvm::errors::{OnChainError, RuntimeError};
+use evm::Precompiled;
+use evm::errors::{OnChainError, RuntimeError};
 
 pub static BN128_ADD_PRECOMPILED: Bn128AddPrecompiled = Bn128AddPrecompiled;
 

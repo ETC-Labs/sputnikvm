@@ -1,14 +1,14 @@
 [package]
-name = "sputnikvm"
-version = "0.10.1"
+name = "evm"
+version = "0.11.0-beta.0"
 license = "Apache-2.0"
 authors = ["Wei Tang <hi@that.world>"]
 description = "SputnikVM - a Portable Blockchain Virtual Machine"
-repository = "https://github.com/ETCDEVTeam/sputnikvm"
+repository = "https://github.com/ETCDEVTeam/evm"
 keywords = ["no_std", "ethereum"]
 
 [lib]
-name = "sputnikvm"
+name = "evm"
 
 [dependencies]
 sha3 = "0.6"

@@ -1,6 +1,6 @@
 use bigint::{Gas, M256, U256, H256, Address};
 use hexutil::*;
-use sputnikvm::{Log, Context,
+use evm::{Log, Context,
                 AccountChange, AccountCommitment,
                 HeaderParams};
 

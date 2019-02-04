@@ -2,8 +2,8 @@
 extern crate clap;
 extern crate bigint;
 extern crate hexutil;
-extern crate sputnikvm;
-extern crate sputnikvm_network_classic;
+extern crate evm;
+extern crate evm_network_classic;
 extern crate serde_json;
 extern crate gethrpc;
 extern crate flame;
@@ -15,10 +15,10 @@ use std::fs::File;
 use profiler::Profiler;
 use bigint::{Gas, Address, U256, M256, H256};
 use hexutil::read_hex;
-use sputnikvm::{HeaderParams, Context, SeqTransactionVM, ValidTransaction, VM,
+use evm::{HeaderParams, Context, SeqTransactionVM, ValidTransaction, VM,
                 AccountCommitment, RequireError, TransactionAction, VMStatus,
                 SeqContextVM};
-use sputnikvm_network_classic::{MainnetFrontierPatch, MainnetHomesteadPatch, MainnetEIP150Patch, MainnetEIP160Patch, MainnetByzantiumPatch, MainnetConstantinoplePatch};
+use evm_network_classic::{MainnetFrontierPatch, MainnetHomesteadPatch, MainnetEIP150Patch, MainnetEIP160Patch, MainnetByzantiumPatch, MainnetConstantinoplePatch};
 use gethrpc::{GethRPCClient, NormalGethRPCClient, RPCBlock};
 use std::str::FromStr;
 use std::ops::DerefMut;

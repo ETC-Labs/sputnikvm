@@ -1,6 +1,6 @@
 extern crate bigint;
 extern crate num_bigint;
-extern crate sputnikvm;
+extern crate evm;
 
 #[cfg(test)]
 extern crate hexutil;
@@ -8,8 +8,8 @@ extern crate hexutil;
 use std::rc::Rc;
 use bigint::{Gas, U256};
 
-use sputnikvm::Precompiled;
-use sputnikvm::errors::{OnChainError, RuntimeError, NotSupportedError};
+use evm::Precompiled;
+use evm::errors::{OnChainError, RuntimeError, NotSupportedError};
 
 pub static MODEXP_PRECOMPILED: ModexpPrecompiled = ModexpPrecompiled;
 

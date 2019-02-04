@@ -44,9 +44,9 @@
 //!
 //! ```
 //! extern crate bigint;
-//! extern crate sputnikvm;
+//! extern crate evm;
 //!
-//! use sputnikvm::{EmbeddedPatch, VMTestPatch,
+//! use evm::{EmbeddedPatch, VMTestPatch,
 //!                 HeaderParams, ValidTransaction, TransactionAction,
 //!                 VM, SeqTransactionVM};
 //! use bigint::{Gas, U256, Address};

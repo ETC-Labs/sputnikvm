@@ -178,7 +178,7 @@ fn derive_patch(config: &Config) -> (Ident, Ident) {
     } else {
         (
             Ident::from("VMTestPatch"),
-            Ident::from("sputnikvm::VMTestPatch")
+            Ident::from("evm::VMTestPatch")
         )
     }
 }

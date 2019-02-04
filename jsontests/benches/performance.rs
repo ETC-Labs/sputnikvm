@@ -3,7 +3,7 @@
 #[macro_use]
 extern crate jsontests_derive;
 extern crate jsontests;
-extern crate sputnikvm;
+extern crate evm;
 #[macro_use]
 extern crate criterion;
 
