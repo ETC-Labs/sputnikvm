@@ -1,6 +1,6 @@
 # SputnikVM: A Blockchain Virtual Machine
 
-[![Build Status](https://travis-ci.org/ETCDEVTeam/sputnikvm.svg?branch=master)](https://travis-ci.org/ETCDEVTeam/sputnikvm)
+[![Build Status](https://travis-ci.org/etclabscore/sputnikvm.svg?branch=master)](https://travis-ci.org/etclabscore/sputnikvm)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](./LICENSE)
 
 | Name               | Description                                   | Crates.io                                                                                                           | Documentation                                                                                        |
@@ -48,7 +48,7 @@ The core library has the initial four precompiled contracts embedded. To use the
 
 ## Related projects
 
- * [SputnikVM Dev](https://github.com/ETCDEVTeam/sputnikvm-dev) - SputnikVM instance for Smart Contract development, 
+ * [SputnikVM Dev](https://github.com/etclabscore/sputnikvm-dev) - SputnikVM instance for Smart Contract development, 
     provides testing environment and mock for JSON RPC API
  * [SputnikVM in Browser](https://github.com/sorpaas/sputnikvm-in-browser) - experimental version of SputnikVM 
     compiled into WebAssembly, therefore can be launched in a browser on Node.js
@@ -77,7 +77,7 @@ To start working with SputnikVM you'll
 need to install [rustup](https://www.rustup.rs/), then you can do:
  
 ```bash
-$ git clone git@github.com:ETCDEVTeam/sputnikvm.git
+$ git clone git@github.com:etclabscore/sputnikvm.git
 $ cd sputnikvm
 $ cargo build --release --all
 ```
@@ -88,18 +88,18 @@ We currently use two ways to test SputnikVM and ensure its execution
 aligns with other Ethereum Virtual Machine implementations:
 
 * [jsontests](/jsontests): This uses part of the Ethereum
-  [tests](https://github.com/ETCDEVTeam/tests). Those tests
+  [tests](https://github.com/etclabscore/tests). Those tests
   currently does not have good coverage for system operation
   opcodes. Besides, some tests are incorrect so they are disabled.
 * [regtests](/regtests): A complete regression tests is done on the
   Ethereum Classic mainnet from genesis block to block 4 million. Some
   of the previously failed tests are also integrated into Rust's test
   system. See
-  [wiki](https://github.com/ETCDEVTeam/sputnikvm/wiki/Building-and-Testing)
+  [wiki](https://github.com/etclabscore/sputnikvm/wiki/Building-and-Testing)
   for how to reproduce the regression tests.
   
 To learn more about building SputnikVM from source please read wiki page
- [Building and Testing](https://github.com/ETCDEVTeam/sputnikvm/wiki/Building-and-Testing)  
+ [Building and Testing](https://github.com/etclabscore/sputnikvm/wiki/Building-and-Testing)  
 
 ## License
 
