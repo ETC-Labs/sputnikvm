@@ -1,3 +1,5 @@
+# Moved to https://github.com/ethereumproject/evm-rs
+
 # SputnikVM: A Blockchain Virtual Machine
 
 [![Build Status](https://travis-ci.org/ETCDEVTeam/sputnikvm.svg?branch=master)](https://travis-ci.org/ETCDEVTeam/sputnikvm)
